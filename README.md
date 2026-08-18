@@ -33,15 +33,9 @@ Add derived features (e.g., squared terms like `DTI_Ratio_sq`, `Credit_Score_sq`
 
 ---
 
-## 🧭 Architecture / Workflow (visual)
+## 🛠️ Dependencies
 
-```mermaid
-flowchart TD
-  A[📂 loan_approval_data.csv] --> B[🔹 Load Data\n(pd.read_csv)]
-  B --> C[🧹 Clean & Impute\n(SimpleImputer)]
-  C --> D[🔎 EDA & Visualization\n(seaborn, matplotlib)]
-  D --> E[🔤 Encoding\n(LabelEncoder, OneHotEncoder)]
-  E --> F[⚖️ Scaling & Split\n(StandardScaler, train_test_split)]
-  F --> G[🧠 Modeling\n(LogisticRegression, KNN, GaussianNB)]
-  G --> H[📊 Evaluation\n(precision, recall, f1, accuracy, CM)]
-  H --> I[🔁 Feature Engineering\n(add features, retrain)]
+Install the required packages:
+
+```bash
+pip install pandas numpy seaborn matplotlib scikit-learn
